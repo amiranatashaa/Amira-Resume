@@ -3,22 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amira Natasha Binti Roslan — IT Application Analyst & Full-Stack Developer</title>
-<meta name="description" content="CV of Amira Natasha Binti Roslan, IT Application Analyst, Full-Stack Developer and Systems Analyst based in Kuala Lumpur, Malaysia.">
+<title>Amira Natasha Binti Roslan — IT Application Analyst &amp; Full-Stack Developer</title>
+<meta name="description" content="Amira Natasha Binti Roslan — IT Application Analyst, Full-Stack Developer and Systems Analyst in Kuala Lumpur. ColdFusion, SQL Server, PHP and Python enterprise systems.">
+<meta name="author" content="Amira Natasha Binti Roslan">
+
+<!-- ASSUMPTION: GitHub Pages default URL. If you point a custom domain (amiranatasha.dev)
+     at this repo, change SITE_URL in these three tags and in the JSON-LD block below. -->
+<link rel="canonical" href="https://amiranatasharoslan.github.io/">
+
+<!-- Social preview. og:image must be an absolute URL and should be 1200x630.
+     TODO: add og-cover.jpg to the repo root, or delete the og:image/twitter:image lines. -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Amira Natasha Binti Roslan — IT Application Analyst &amp; Full-Stack Developer">
+<meta property="og:description" content="ColdFusion, SQL Server, PHP and Python enterprise systems. Kuala Lumpur, Malaysia.">
+<meta property="og:url" content="https://amiranatasharoslan.github.io/">
+<meta property="og:image" content="https://amiranatasharoslan.github.io/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amira Natasha Binti Roslan — IT Application Analyst &amp; Full-Stack Developer">
+<meta name="twitter:description" content="ColdFusion, SQL Server, PHP and Python enterprise systems. Kuala Lumpur, Malaysia.">
+<meta name="twitter:image" content="https://amiranatasharoslan.github.io/og-cover.jpg">
+
+<meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121820" media="(prefers-color-scheme: dark)">
+
+<!-- Inline SVG favicon: a monogram, no extra file to host. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232A5866'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23F5F3EE' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data: lets Google show a knowledge panel for your name and
+     link your profiles together. Keep sameAs in sync with your real accounts. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Amira Natasha binti Roslan",
+  "givenName": "Amira Natasha",
+  "familyName": "Roslan",
+  "url": "https://amiranatasharoslan.github.io/",
+  "jobTitle": "IT Application Analyst",
+  "email": "mailto:amiranatasha.roslan@gmail.com",
+  "telephone": "+60182250331",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kuala Lumpur",
+    "addressCountry": "MY"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Forest Research Institute Malaysia (FRIM)"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universiti Kebangsaan Malaysia" },
+    { "@type": "CollegeOrUniversity", "name": "Politeknik Ungku Omar" }
+  ],
+  "knowsLanguage": ["en", "ms"],
+  "knowsAbout": ["ColdFusion", "Microsoft SQL Server", "PHP", "Python", "JavaScript", "Systems Analysis", "Secure Coding"],
+  "sameAs": [
+    "https://www.linkedin.com/in/amiranatasharoslan",
+    "https://github.com/amiranatasharoslan"
+  ]
+}
+</script>
+
 <style>
+  /* ============================================================
+     DESIGN TOKENS
+     Light is the default. Dark follows the OS unless the visitor
+     has explicitly chosen light via the toggle (data-theme="light").
+     ============================================================ */
   :root{
-    --ink: #14202B;
-    --paper: #F5F3EE;
+    --ink:          #14202B;
+    --paper:        #F5F3EE;
     --paper-raised: #FFFFFF;
-    --teal: #3D7A8A;
-    --teal-deep: #2A5866;
-    --gold: #B8902E;
-    --slate: #4A5568;
-    --line: #D8D3C7;
+    --teal:         #3D7A8A;
+    --teal-deep:    #2A5866;
+    /* CHANGED: old gold #B8902E scored only ~3.3:1 on the paper background,
+       which fails WCAG AA for the 11-12px section keys and year labels. */
+    --gold:         #8A6A16;
+    --slate:        #4A5568;
+    --line:         #D8D3C7;
+    --shadow:       0 1px 2px rgba(20,32,43,0.04);
     --radius: 3px;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:          #E8E6E1;
+      --paper:        #121820;
+      --paper-raised: #1A222C;
+      --teal:         #6FB3C4;
+      --teal-deep:    #8FCDDD;
+      --gold:         #D9AE4E;
+      --slate:        #A3AFBF;
+      --line:         #2C3744;
+      --shadow:       0 1px 2px rgba(0,0,0,0.3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:          #E8E6E1;
+    --paper:        #121820;
+    --paper-raised: #1A222C;
+    --teal:         #6FB3C4;
+    --teal-deep:    #8FCDDD;
+    --gold:         #D9AE4E;
+    --slate:        #A3AFBF;
+    --line:         #2C3744;
+    --shadow:       0 1px 2px rgba(0,0,0,0.3);
+    color-scheme: dark;
   }
 
   *{ box-sizing: border-box; }
@@ -28,26 +124,22 @@
     margin:0;
     background: var(--paper);
     color: var(--ink);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
   a{ color: inherit; }
-  ::selection{ background: var(--gold); color: var(--paper); }
+  ::selection{ background: var(--teal-deep); color: var(--paper); }
 
   h1, h2, h3{
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
     margin: 0;
     letter-spacing: -0.01em;
   }
-  .mono{ font-family: 'IBM Plex Mono', monospace; }
+  .mono{ font-family: 'IBM Plex Mono', ui-monospace, monospace; }
 
-  .wrap{
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
+  .wrap{ max-width: 880px; margin: 0 auto; padding: 0 32px; }
 
   .skip-link{
     position:absolute; left:-9999px; top:0;
@@ -55,52 +147,90 @@
     z-index: 100; border-radius: var(--radius);
   }
   .skip-link:focus{ left: 16px; top: 16px; }
-  a:focus-visible, button:focus-visible{ outline: 2px solid var(--teal); outline-offset: 3px; }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+
+  .vh{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+  svg.ico{ width: 15px; height: 15px; flex-shrink:0; stroke: currentColor; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; opacity:0.75; }
 
   /* ---------- Header ---------- */
   header{
     position: sticky; top: 0; z-index: 20;
-    background: rgba(245,243,238,0.92);
-    backdrop-filter: blur(6px);
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line);
   }
-  nav.wrap{ display:flex; align-items:center; justify-content: space-between; height: 64px; }
-  .nav-mark{ font-family:'IBM Plex Mono', monospace; font-weight:500; font-size: 14px; color: var(--teal-deep); }
-  .nav-links{ display:flex; gap: 24px; list-style:none; margin:0; padding:0; font-size: 14px; }
-  .nav-links a{ text-decoration:none; color: var(--slate); padding: 4px 2px; border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s; }
+  @supports not (background: color-mix(in srgb, red 50%, transparent)){
+    header{ background: var(--paper); }
+  }
+  nav.wrap{ display:flex; align-items:center; gap:16px; justify-content: space-between; height: 64px; }
+  .nav-mark{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-weight:500; font-size: 14px; color: var(--teal-deep); text-decoration:none; flex-shrink:0; }
+  .nav-right{ display:flex; align-items:center; gap:18px; min-width:0; }
+  .nav-links{
+    display:flex; gap: 22px; list-style:none; margin:0; padding:0; font-size: 14px;
+    overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar{ display:none; }
+  .nav-links a{
+    text-decoration:none; color: var(--slate); padding: 4px 2px; white-space: nowrap;
+    border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;
+  }
   .nav-links a:hover{ color: var(--ink); border-bottom-color: var(--gold); }
+  /* Scrollspy state, set by the IntersectionObserver below. */
+  .nav-links a[aria-current="true"]{ color: var(--ink); border-bottom-color: var(--teal); }
+
+  .theme-toggle{
+    display:inline-flex; align-items:center; justify-content:center;
+    width: 34px; height: 34px; flex-shrink:0;
+    background: transparent; color: var(--slate);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    cursor: pointer; transition: color .2s, border-color .2s;
+  }
+  .theme-toggle:hover{ color: var(--ink); border-color: var(--slate); }
+  .theme-toggle svg{ width:16px; height:16px; stroke: currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+  .theme-toggle .moon{ display:none; }
+  :root[data-theme="dark"] .theme-toggle .moon{ display:block; }
+  :root[data-theme="dark"] .theme-toggle .sun{ display:none; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .theme-toggle .moon{ display:block; }
+    :root:not([data-theme="light"]) .theme-toggle .sun{ display:none; }
+  }
 
   /* ---------- Hero ---------- */
-  .hero{ padding: 88px 0 64px; position: relative; border-top:none; }
-  .hero-inner{ display:flex; align-items:center; gap: 40px; }
+  .hero{ padding: 88px 0 64px; }
+  /* flex-start, not center: against a tall text block a centred avatar drifts
+     down beside the role line instead of sitting with the name. */
+  .hero-inner{ display:flex; align-items:flex-start; gap: 40px; }
+  .hero-text{ padding-top: 4px; }
   .avatar{
     width: 112px; height: 112px; border-radius: 50%;
     object-fit: cover; border: 2px solid var(--line);
-    flex-shrink: 0;
+    flex-shrink: 0; background: var(--paper-raised);
   }
   .terminal{
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
     font-size: 14px; color: var(--teal-deep);
-    margin-bottom: 20px; min-height: 20px;
+    margin: 0 0 20px; min-height: 22px;
   }
   .terminal .cursor{ display:inline-block; width: 8px; background: var(--gold); animation: blink 1s steps(1) infinite; margin-left: 2px; }
   @keyframes blink{ 50%{ opacity: 0; } }
 
   .hero h1{ font-size: clamp(30px, 5vw, 44px); font-weight: 700; color: var(--ink); }
-  .hero .role{ font-family:'Space Grotesk', sans-serif; font-size: clamp(15px, 2vw, 18px); color: var(--teal-deep); font-weight: 500; margin-top: 8px; }
-  .hero-meta{ display:flex; flex-wrap:wrap; gap: 16px 24px; margin-top: 16px; font-size: 14px; color: var(--slate); }
+  .hero .role{ font-family:'Space Grotesk', system-ui, sans-serif; font-size: clamp(15px, 2vw, 18px); color: var(--teal-deep); font-weight: 500; margin: 8px 0 0; }
+  .hero-meta{ display:flex; flex-wrap:wrap; gap: 10px 24px; margin-top: 18px; font-size: 14px; color: var(--slate); list-style:none; padding:0; }
+  .hero-meta li{ display:inline-flex; align-items:center; gap:7px; }
   .hero-meta a{ text-decoration:none; }
-  .hero-meta a:hover{ color: var(--teal-deep); }
-  .hero-meta span{ display:inline-flex; align-items:center; gap:6px; }
+  .hero-meta a:hover{ color: var(--teal-deep); text-decoration: underline; }
 
-  .hero-actions{ display:flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+  .hero-actions{ display:flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
   .btn{
     display:inline-flex; align-items:center; gap:8px;
     padding: 12px 20px; border-radius: var(--radius); text-decoration:none;
-    font-size: 14px; font-weight: 500; font-family: 'Inter', sans-serif;
+    font-size: 14px; font-weight: 500;
     border: 1px solid var(--ink);
-    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
+  .btn svg{ width:15px; height:15px; stroke: currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
   .btn-primary{ background: var(--ink); color: var(--paper); }
   .btn-primary:hover{ background: var(--teal-deep); border-color: var(--teal-deep); transform: translateY(-1px); }
   .btn-ghost{ background: transparent; color: var(--ink); }
@@ -108,28 +238,33 @@
 
   /* ---------- Sections ---------- */
   section{ padding: 60px 0; border-top: 1px solid var(--line); }
+  /* FIX: the sticky 64px header used to cover anchor targets on jump. */
+  section[id]{ scroll-margin-top: 80px; }
   .section-head{ display:flex; align-items: baseline; gap: 14px; margin-bottom: 32px; }
-  .section-head .key{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.04em; }
+  .section-head .key{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.04em; }
   .section-head h2{ font-size: 24px; font-weight: 600; }
 
-  .about p{ color: var(--slate); max-width: 680px; font-size: 16px; }
+  .about p{ color: var(--slate); max-width: 680px; font-size: 16px; margin: 0 0 14px; }
+  .about p:last-child{ margin-bottom:0; }
+  .about strong{ color: var(--ink); font-weight: 600; }
 
-  /* ---------- Skills ---------- */
-  .skills-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-  .skill-group-title{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--teal-deep); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
-  .skill-row{ margin-bottom: 14px; }
-  .skill-row .skill-labels{ display:flex; justify-content: space-between; font-size: 13.5px; margin-bottom: 6px; }
-  .skill-row .skill-labels .pct{ font-family:'IBM Plex Mono', monospace; color: var(--slate); font-size: 12px; }
-  .bar-track{ height: 6px; background: var(--line); border-radius: 4px; overflow: hidden; }
-  .bar-fill{ height:100%; background: linear-gradient(90deg, var(--teal-deep), var(--teal)); border-radius: 4px; }
-
-  .tag-row{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 8px; }
-  .tag{ font-size: 13px; padding: 5px 10px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); background: var(--paper-raised); }
+  /* ---------- Skills ----------
+     CHANGED: the percentage bars are gone. A self-assigned "PHP 95%" invites
+     a reviewer to argue with the number instead of reading the work, and
+     "soft skills" as percentages reads as filler. Grouped capability lists
+     say more and can't be disputed. */
+  .skill-group{ padding: 22px 0; border-top: 1px dashed var(--line); }
+  .skill-group:first-child{ border-top:none; padding-top:0; }
+  .skill-group-title{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: var(--teal-deep); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .skill-group p{ margin: 0 0 12px; color: var(--slate); font-size: 14px; max-width: 640px; }
+  .tag-row{ display:flex; flex-wrap:wrap; gap: 8px; }
+  .tag{ font-size: 13px; padding: 5px 11px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); background: var(--paper-raised); box-shadow: var(--shadow); }
+  .tag.lead{ border-color: var(--teal); color: var(--teal-deep); font-weight: 500; }
 
   /* ---------- Experience ---------- */
   .job{ display:grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid var(--line); }
   .job:first-child{ border-top:none; padding-top:0; }
-  .job-date{ font-family:'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--slate); padding-top: 3px; }
+  .job-date{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: var(--slate); padding-top: 3px; }
   .job-title{ font-size: 16.5px; font-weight: 600; }
   .job-org{ color: var(--teal-deep); font-size: 14px; margin-top: 2px; font-weight:500; }
   .job ul{ margin: 12px 0 0; padding-left: 18px; color: var(--slate); font-size: 14.5px; }
@@ -140,14 +275,15 @@
   .edu-item:first-child{ border-top:none; padding-top:0; }
   .edu-top{ display:flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   .edu-title{ font-size: 16px; font-weight:600; }
-  .edu-date{ font-family:'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--slate); }
+  .edu-date{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: var(--slate); }
   .edu-org{ color: var(--teal-deep); font-size: 14px; margin-top: 2px; font-weight: 500; }
   .edu-item p{ margin: 8px 0 0; color: var(--slate); font-size: 14.5px; }
 
   /* ---------- Projects ---------- */
   .project-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .project-card{ border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; background: var(--paper-raised); }
-  .project-card h3{ font-size: 16px; margin-bottom: 10px; }
+  .project-card{ border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; background: var(--paper-raised); box-shadow: var(--shadow); }
+  .project-card h3{ font-size: 16px; margin-bottom: 8px; }
+  .project-card .stack{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: var(--gold); letter-spacing: 0.02em; margin-bottom: 10px; }
   .project-card p{ color: var(--slate); font-size: 14px; margin:0; }
 
   /* ---------- Achievements ---------- */
@@ -155,34 +291,89 @@
   .achieve-row:first-child{ border-top: none; padding-top: 0; }
   .achieve-title{ font-weight: 600; font-size: 15px; }
   .achieve-desc{ color: var(--slate); font-size: 14px; margin-top: 4px; }
-  .achieve-year{ font-family:'IBM Plex Mono', monospace; font-size: 13px; color: var(--gold); text-align:right; }
+  .achieve-year{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: var(--gold); text-align:right; }
 
   /* ---------- Contact ---------- */
   .contact-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .contact-item{ border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--paper-raised); }
-  .contact-item .label{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; }
+  .contact-item{ border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; background: var(--paper-raised); box-shadow: var(--shadow); }
+  .contact-item .label{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; }
   .contact-item .value{ margin-top: 8px; font-size: 14.5px; font-weight: 500; word-break: break-word; }
   .contact-item a{ text-decoration:none; }
-  .contact-item a:hover{ color: var(--teal-deep); }
+  .contact-item a:hover{ color: var(--teal-deep); text-decoration: underline; }
 
-  footer{ padding: 32px 0 48px; text-align:center; font-size: 13px; color: var(--slate); }
+  footer{ padding: 32px 0 48px; text-align:center; font-size: 13px; color: var(--slate); border-top: 1px solid var(--line); }
+  footer .dot{ color: var(--teal); }
 
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }
     .cursor{ animation: none; opacity: 1; }
+    *{ transition-duration: 0.01ms !important; }
   }
 
   @media (max-width: 720px){
-    .nav-links{ display:none; }
-    .hero-inner{ flex-direction: column; align-items: flex-start; }
+    .wrap{ padding: 0 20px; }
+    /* CHANGED: the nav used to be display:none below 720px, so phone visitors
+       lost every section link. It now scrolls horizontally instead. */
+    .nav-mark{ display:none; }
+    nav.wrap{ justify-content: space-between; }
+    .nav-right{ flex:1; justify-content: space-between; }
+    .nav-links{ gap:18px; }
+    .hero-inner{ flex-direction: column; align-items: flex-start; gap: 24px; }
     .job{ grid-template-columns: 1fr; gap: 6px; }
-    .skills-grid{ grid-template-columns: 1fr; gap: 28px; }
+    .job-date{ padding-top:0; }
     .project-grid{ grid-template-columns: 1fr; }
     .contact-grid{ grid-template-columns: 1fr; }
     .achieve-row{ grid-template-columns: 1fr; }
     .achieve-year{ text-align:left; }
-    .edu-top{ flex-direction: column; }
-    .hero{ padding: 64px 0 48px; }
+    .edu-top{ flex-direction: column; gap: 2px; }
+    .hero{ padding: 56px 0 44px; }
+    section{ padding: 48px 0; }
+    .btn{ flex: 1 1 auto; justify-content:center; }
+  }
+
+  /* ============================================================
+     PRINT — recruiters print CV pages. This makes Ctrl+P produce
+     a clean two-page document instead of a screenshot of a website.
+     ============================================================ */
+  @media print{
+    @page{ margin: 14mm; }
+    :root{
+      --ink:#000; --paper:#fff; --paper-raised:#fff;
+      --slate:#333; --teal-deep:#000; --gold:#555; --line:#bbb; --shadow:none;
+    }
+    header, .hero-actions, .theme-toggle, .terminal, .skip-link, footer, #contact,
+    .skill-group p, .about p + p{ display:none !important; }
+    body{ font-size: 9.3pt; line-height: 1.34; background:#fff; }
+    .wrap{ max-width:none; padding:0; }
+    .hero{ padding: 0 0 8pt; }
+    .hero-inner{ gap: 14pt; }
+    .avatar{ width: 64px; height: 64px; border-width: 1px; }
+    .hero h1{ font-size: 17pt; }
+    .hero .role{ font-size: 10pt; margin-top: 3pt; }
+    .hero-meta{ margin-top: 7pt; gap: 3pt 16pt; font-size: 8.6pt; }
+    section{ padding: 8pt 0; border-top: 0.5pt solid #bbb; }
+    .section-head{ margin-bottom: 7pt; break-after: avoid; }
+    .section-head h2{ font-size: 11.5pt; }
+    .edu-item, .achieve-row, .project-card, .skill-group{ break-inside: avoid; }
+    /* Jobs may split across a page break — forcing them whole left half of
+       page 1 blank. orphans/widows stop a single stranded line. */
+    .job{ grid-template-columns: 110px 1fr; gap: 12pt; padding: 8pt 0; orphans: 3; widows: 3; }
+    .job li{ break-inside: avoid; }
+    .job ul{ margin-top: 5pt; font-size: 9pt; }
+    .job li + li{ margin-top: 2.5pt; }
+    .job-title{ font-size: 10.5pt; }
+    .skill-group{ padding: 6pt 0; }
+    .skill-group-title{ margin-bottom: 4pt; }
+    .tag{ padding: 2pt 5pt; font-size: 8.4pt; box-shadow:none; }
+    .edu-item{ padding: 8pt 0; }
+    .achieve-row{ padding: 6pt 0; }
+    .project-grid{ grid-template-columns: repeat(3, 1fr); gap: 7pt; }
+    .project-card{ border: 0.5pt solid #bbb; padding: 7pt; }
+    .project-card h3{ font-size: 10pt; margin-bottom: 3pt; }
+    .project-card p{ font-size: 8.4pt; }
+    /* Print the destination of outbound links, since a printed page can't be clicked. */
+    .hero-meta a::after{ content: ""; }
+    a[href^="http"]::after{ content: " (" attr(href) ")"; font-size: 8.5pt; color:#555; word-break: break-all; }
   }
 </style>
 </head>
@@ -192,210 +383,234 @@
 
 <header>
   <nav class="wrap" aria-label="Primary">
-    <span class="nav-mark">amiranatasha.dev</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a class="nav-mark" href="#main">amiranatasha.dev</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+      </button>
+    </div>
   </nav>
 </header>
 
 <main id="main">
 
-  <section class="hero">
+  <section class="hero" aria-labelledby="name">
     <div class="wrap">
       <div class="hero-inner">
-        <img src="amiranatasha.jpg" alt="Portrait of Amira Natasha Binti Roslan" class="avatar">
-        <div>
-          <p class="terminal" id="terminalLine">&nbsp;</p>
-          <h1>Amira Natasha Binti Roslan</h1>
+        <!-- width/height set so the layout doesn't jump while the photo loads. -->
+        <img src="amiranatasha.jpg" alt="Portrait of Amira Natasha Binti Roslan"
+             class="avatar" width="112" height="112" decoding="async">
+        <div class="hero-text">
+          <!-- Decorative flourish: hidden from screen readers so it isn't
+               announced character by character while it types. -->
+          <p class="terminal" id="terminalLine" aria-hidden="true">&nbsp;</p>
+          <h1 id="name">Amira Natasha Binti Roslan</h1>
           <p class="role">IT Application Analyst · Full-Stack Developer · Systems Analyst</p>
-          <div class="hero-meta">
-            <span>📍 Taman Koperasi Polis Fasa 2, Kuala Lumpur</span>
-            <span>📞 <a href="tel:+60182250331">+6018-2250331</a></span>
-            <span>✉️ <a href="mailto:amiranatasha.roslan@gmail.com">amiranatasha.roslan@gmail.com</a></span>
-          </div>
+          <ul class="hero-meta">
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="vh">Location:</span>Taman Koperasi Polis Fasa 2, Kuala Lumpur
+            </li>
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+              <span class="vh">Phone:</span><a href="tel:+60182250331">+6018-2250331</a>
+            </li>
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              <span class="vh">Email:</span><a href="mailto:amiranatasha.roslan@gmail.com">amiranatasha.roslan@gmail.com</a>
+            </li>
+          </ul>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Get in touch</a>
-            <a class="btn btn-ghost" href="https://linkedin.com/in/amiranatasharoslan" target="_blank" rel="noopener">LinkedIn profile</a>
+            <a class="btn btn-primary" href="#contact">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              Get in touch
+            </a>
+            <!-- TODO: export the CV to Amira-Natasha-Roslan-CV.pdf and drop it in the
+                 repo root, or remove this button until the file exists. -->
+            <a class="btn btn-ghost" href="Amira-Natasha-Roslan-CV.pdf" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
+              Download CV
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/amiranatasharoslan" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-11h4v1.5A4 4 0 0116 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about" aria-labelledby="about-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">01</span><h2>About</h2></div>
+      <div class="section-head"><span class="key">01</span><h2 id="about-h">About</h2></div>
       <p>
-        IT professional with 3+ years of progressive experience spanning full-stack web development,
-        system analysis, and application support across government and private sectors. I specialise
-        in architecting and enhancing enterprise systems — from a ColdFusion-based financial
-        management platform at FRIM to PHP/Python multi-tenant applications — while delivering
-        measurable gains in operational efficiency. I'm skilled at bridging technical and business
-        stakeholders to translate complex requirements into reliable, maintainable solutions.
-        I hold a Bachelor of Information Technology (Hons) from Universiti Kebangsaan Malaysia.
+        IT professional with <strong>3+ years</strong> across the government and private sectors,
+        spanning full-stack web development, systems analysis and application support. I specialise in
+        architecting and modernising enterprise systems — currently a
+        <strong>ColdFusion and SQL Server financial management platform</strong> at FRIM that replaces
+        a legacy ASP.NET system, previously PHP and Python multi-tenant applications.
+      </p>
+      <p>
+        Most of my work starts in somebody else's undocumented code. I'm comfortable tracing data
+        lineage through a schema nobody has a diagram for, reconciling figures against the system of
+        record until they agree line by line, and fixing the cause rather than the symptom. I hold a
+        Bachelor of Information Technology (Hons) from Universiti Kebangsaan Malaysia.
       </p>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" aria-labelledby="skills-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">02</span><h2>Skills</h2></div>
-      <div class="skills-grid">
-        <div>
-          <div class="skill-group-title">Technical</div>
+      <div class="section-head"><span class="key">02</span><h2 id="skills-h">Skills</h2></div>
 
-          <div class="skill-row">
-            <div class="skill-labels"><span>PHP, HTML, CSS</span><span class="pct">95%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Office Suite</span><span class="pct">95%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>MySQL, JavaScript</span><span class="pct">90%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>AWS Cloud</span><span class="pct">80%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Adobe Illustrator</span><span class="pct">80%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Magento / LightSail</span><span class="pct">80%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Adobe Photoshop</span><span class="pct">75%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">ColdFusion</span>
-            <span class="tag">SQL Server</span>
-            <span class="tag">Python</span>
-            <span class="tag">Bootstrap 5</span>
-          </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Core stack</div>
+        <p>What I build production systems with day to day.</p>
+        <div class="tag-row">
+          <span class="tag lead">ColdFusion (CFML)</span>
+          <span class="tag lead">Microsoft SQL Server</span>
+          <span class="tag lead">T-SQL</span>
+          <span class="tag lead">PHP</span>
+          <span class="tag lead">JavaScript</span>
+          <span class="tag lead">HTML &amp; CSS</span>
         </div>
+      </div>
 
-        <div>
-          <div class="skill-group-title">Soft skills</div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Application support</span><span class="pct">95%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Cross-team collaboration</span><span class="pct">95%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Process handling</span><span class="pct">90%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="skill-labels"><span>Issue resolution</span><span class="pct">90%</span></div>
-            <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
-          </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Also work with</div>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Bootstrap 5</span>
+          <span class="tag">AJAX / JSON endpoints</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
 
-          <div class="skill-group-title" style="margin-top:28px;">Languages</div>
-          <div class="tag-row">
-            <span class="tag">English</span>
-            <span class="tag">Bahasa Melayu</span>
-          </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud &amp; tooling</div>
+        <div class="tag-row">
+          <span class="tag">AWS — Certified Cloud Practitioner</span>
+          <span class="tag">Magento on Amazon Lightsail</span>
+          <span class="tag">Google Workspace administration</span>
+          <span class="tag">Adobe Illustrator</span>
+          <span class="tag">Adobe Photoshop</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Engineering practice</div>
+        <p>How I work, beyond the languages.</p>
+        <div class="tag-row">
+          <span class="tag">Systems analysis</span>
+          <span class="tag">Secure coding</span>
+          <span class="tag">Legacy modernisation</span>
+          <span class="tag">Data reconciliation</span>
+          <span class="tag">Query performance tuning</span>
+          <span class="tag">UAT scripting</span>
+          <span class="tag">Technical documentation</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <p>I write technical documentation, user manuals and stakeholder presentations in both.</p>
+        <div class="tag-row">
+          <span class="tag">English</span>
+          <span class="tag">Bahasa Malaysia</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" aria-labelledby="exp-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">03</span><h2>Experience</h2></div>
-      <div class="timeline">
+      <div class="section-head"><span class="key">03</span><h2 id="exp-h">Experience</h2></div>
 
-        <div class="job">
-          <div class="job-date">Apr 2026 – Present</div>
-          <div>
-            <div class="job-title">Penolong Teknologi Maklumat (IT Officer)</div>
-            <div class="job-org">Forest Research Institute Malaysia (FRIM)</div>
-            <ul>
-              <li>Worked closely with finance stakeholders and fellow developers to architect and enhance an internal financial management system, supporting end-to-end financial workflows across multiple finance units.</li>
-              <li>Engineered security hardening measures including CSRF token validation, XSS prevention, parameterised queries, role-based access control, and session security, reducing vulnerability exposure across 6+ modules.</li>
-              <li>Migrated system datasource architecture from a single connection to three dedicated, purpose-specific sources, improving query isolation and maintainability.</li>
-              <li>Collaborated with finance officers to map legacy workflows, ensuring accurate business logic re-implementation and zero data loss during module redevelopment.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-date">Apr 2026 – Present</div>
+        <div>
+          <div class="job-title"><span lang="ms">Penolong Pegawai Teknologi Maklumat</span> (IT Application Analyst)</div>
+          <div class="job-org">Forest Research Institute Malaysia (FRIM) · Finance Division</div>
+          <ul>
+            <li>Primary developer on an internal ColdFusion / SQL Server financial management platform replacing a legacy ASP.NET system, supporting end-to-end financial workflows across multiple finance units.</li>
+            <li>Rebuilt statutory financial reporting against a reverse-engineered general ledger structure, consolidating multiple report components into a single query and validating output line by line against the outgoing system.</li>
+            <li>Designed and implemented the platform's role-based access control and audit layer, covering user, module and permission administration.</li>
+            <li>Applied secure-coding standards across the application — parameterised queries, CSRF protection, output encoding and session hardening.</li>
+            <li>Migrated the datasource architecture from a single shared connection to dedicated, purpose-specific sources, improving query isolation and maintainability.</li>
+            <li>Built batch document printing for vouchers, cheques, purchase orders and receipts on continuous-stationery hardware, with the <span lang="ms">Bahasa Malaysia</span> user manual and staff guide to match.</li>
+          </ul>
         </div>
-
-        <div class="job">
-          <div class="job-date">Aug 2024 – Mar 2026</div>
-          <div>
-            <div class="job-title">IT Application Analyst</div>
-            <div class="job-org">Segi Value Holdings Sdn Bhd</div>
-            <ul>
-              <li>Developed, maintained, and troubleshot enterprise software using PHP, Bootstrap, SQL, Python, and JavaScript, reducing recurring defect rate by streamlining debugging and documentation practices.</li>
-              <li>Delivered system enhancements and upgrade packages that boosted application efficiency, meeting SLA requirements across business units.</li>
-              <li>Partnered with business analysts to analyse, redesign, and document software applications, ensuring alignment with evolving company requirements.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">Apr 2024 – Jul 2024</div>
-          <div>
-            <div class="job-title">Assistant Admin</div>
-            <div class="job-org">Qube Integrated Malaysia Sdn Bhd</div>
-            <ul>
-              <li>Managed 500+ data entries and 200+ files; coordinated scheduling for a team of 10, maintaining 100% supply and correspondence continuity.</li>
-              <li>Compiled, formatted, and proofread 50+ tender documents, ensuring regulatory compliance and on-time submission across all deadlines.</li>
-              <li>Liaised with 4+ internal departments and 10+ external parties to consolidate approvals and gather project-critical information.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">Aug 2023 – Apr 2024</div>
-          <div>
-            <div class="job-title">Protégé</div>
-            <div class="job-org">Hospital Angkatan Tentera Tuanku Mizan</div>
-            <ul>
-              <li>Architected a medication inventory monitoring system (HTML, PHP, MySQL, CSS, JS) that improved tracking accuracy and cut operational overhead by 50%, exceeding benchmark targets.</li>
-              <li>Led development of a pharmacy store management system, streamlining dispensary workflows and reducing turnaround time by 30%.</li>
-              <li>Analysed data from 50+ sources to surface actionable insights, contributing to a 20% uplift in clinical decision-making speed.</li>
-              <li>Increased team productivity by 25% through process documentation, data quality controls, and enhanced administrative workflows.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="job">
-          <div class="job-date">Mar 2023 – Jul 2023</div>
-          <div>
-            <div class="job-title">IT Part-time</div>
-            <div class="job-org">University College MAIWP International (UCMI)</div>
-            <ul>
-              <li>Reconfigured Google Workspace settings across 15 applications, achieving a 20% gain in operational efficiency and 15% boost in team productivity.</li>
-              <li>Oversaw full staff data migration into a new HR application system with 90% accuracy, slashing processing overhead by 40%.</li>
-              <li>Optimised student registration workflows in MySQL Workbench, reducing data entry time by 50% while maintaining data integrity.</li>
-              <li>Collaborated on staff card redesign using Adobe Illustrator, lifting visual quality scores by 40%.</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
+
+      <div class="job">
+        <div class="job-date">Aug 2024 – Mar 2026</div>
+        <div>
+          <div class="job-title">IT Application Analyst</div>
+          <div class="job-org">Segi Value Holdings Sdn Bhd</div>
+          <ul>
+            <li>Developed, maintained and troubleshot enterprise software using PHP, Python, SQL, JavaScript and Bootstrap, reducing the recurring defect rate by streamlining debugging and documentation practice.</li>
+            <li>Delivered system enhancements and upgrade packages that improved application efficiency and met SLA commitments across business units.</li>
+            <li>Partnered with business analysts to analyse, redesign and document applications against evolving company requirements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-date">Apr 2024 – Jul 2024</div>
+        <div>
+          <div class="job-title">Assistant Admin</div>
+          <div class="job-org">Qube Integrated Malaysia Sdn Bhd</div>
+          <ul>
+            <li>Compiled, formatted and proofread 50+ tender documents, ensuring regulatory compliance and on-time submission across all deadlines.</li>
+            <li>Managed 500+ data entries and 200+ files, and coordinated scheduling for a team of 10.</li>
+            <li>Liaised with 4+ internal departments and 10+ external parties to consolidate approvals and gather project-critical information.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-date">Aug 2023 – Apr 2024</div>
+        <div>
+          <div class="job-title">IT Protégé</div>
+          <div class="job-org">Hospital Angkatan Tentera Tuanku Mizan</div>
+          <ul>
+            <li>Architected a medication inventory monitoring system (PHP, MySQL, HTML, CSS, JavaScript) that improved tracking accuracy and cut operational overhead by 50%.</li>
+            <li>Led development of a pharmacy store management system, streamlining dispensary workflows and reducing turnaround time by 30%.</li>
+            <li>Analysed data from 50+ sources to surface actionable insights, contributing to a 20% uplift in clinical decision-making speed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-date">Mar 2023 – Jul 2023</div>
+        <div>
+          <div class="job-title">IT Assistant (part-time)</div>
+          <div class="job-org">University College MAIWP International (UCMI)</div>
+          <ul>
+            <li>Reconfigured Google Workspace settings across 15 applications, achieving a 20% gain in operational efficiency.</li>
+            <li>Oversaw full staff data migration into a new HR application system, cutting processing overhead by 40%.</li>
+            <li>Optimised student registration workflows in MySQL, halving data entry time while maintaining data integrity.</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="education">
+  <section id="education" aria-labelledby="edu-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">04</span><h2>Education</h2></div>
+      <div class="section-head"><span class="key">04</span><h2 id="edu-h">Education</h2></div>
 
       <div class="edu-item">
         <div class="edu-top">
@@ -403,7 +618,7 @@
           <div class="edu-date">Oct 2020 – Nov 2023</div>
         </div>
         <div class="edu-org">Universiti Kebangsaan Malaysia, Bangi</div>
-        <p>CGPA: 3.72 · Thesis: "Cyber Security Risk Assessment Mobile Application"</p>
+        <p>CGPA 3.72 · Thesis: “Cyber Security Risk Assessment Mobile Application”</p>
       </div>
 
       <div class="edu-item">
@@ -412,43 +627,56 @@
           <div class="edu-date">Jun 2017 – Nov 2019</div>
         </div>
         <div class="edu-org">Politeknik Ungku Omar, Ipoh</div>
-        <p>CGPA: 3.76 · Major in Information Security</p>
+        <p>CGPA 3.76 · Major in Information Security</p>
       </div>
 
-      <div class="edu-item">
-        <div class="edu-top">
-          <div class="edu-title">SPM (Malaysian Certificate of Education)</div>
-          <div class="edu-date">Jan 2011 – Dec 2016</div>
-        </div>
-        <div class="edu-org">SMK Batu Muda, Kuala Lumpur</div>
-        <p>Distinction in English Language, Science, Mathematics, Malay Language, History, and Fundamentals of Economics.</p>
-      </div>
+      <!-- REMOVED: the SPM entry. With a degree and a diploma above it, listing
+           secondary school subjects pulls the eye to 2016. Paste it back here
+           if you're applying somewhere that asks for full academic history. -->
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" aria-labelledby="proj-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">05</span><h2>Projects</h2></div>
+      <div class="section-head"><span class="key">05</span><h2 id="proj-h">Projects</h2></div>
       <div class="project-grid">
         <div class="project-card">
+          <h3>FinSight</h3>
+          <div class="stack mono">ColdFusion · SQL Server</div>
+          <p>Financial management, reporting and document-printing platform at FRIM, replacing a legacy ASP.NET system across multiple finance units.</p>
+        </div>
+        <div class="project-card">
+          <h3>MyLoan</h3>
+          <div class="stack mono">ColdFusion · SQL Server</div>
+          <p>Staff financing application system modelling loan eligibility against HR data, including affordability tests and reducing-balance annuity calculation.</p>
+        </div>
+        <div class="project-card">
           <h3>Cyber Risk Calculator</h3>
-          <p>An app that improved cyber risk evaluation for 20+ users, built from a final-year thesis on mobile risk assessment.</p>
+          <div class="stack mono">Mobile · Risk assessment</div>
+          <p>Risk evaluation app serving 20+ users, built out of a final-year thesis on mobile cyber security risk assessment.</p>
         </div>
         <div class="project-card">
           <h3>Shop Management System</h3>
-          <p>A management system handling 50+ products, built with PHP, HTML, CSS, and JavaScript.</p>
+          <div class="stack mono">PHP · MySQL · JavaScript</div>
+          <p>Inventory and sales management for a catalogue of 50+ products, built end to end.</p>
         </div>
         <div class="project-card">
           <h3>E-commerce on Magento</h3>
-          <p>An e-commerce site built with Magento on Amazon LightSail, handling 100+ transactions.</p>
+          <div class="stack mono">Magento · Amazon Lightsail</div>
+          <p>Storefront deployed and maintained on Lightsail, handling 100+ transactions.</p>
+        </div>
+        <div class="project-card">
+          <h3>Blooms by Amira</h3>
+          <div class="stack mono">Static site · Instagram</div>
+          <p>My handmade crochet business in Kuala Lumpur — I build and run the storefront and the channel alongside full-time development.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="achievements">
+  <section id="achievements" aria-labelledby="ach-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">06</span><h2>Achievements &amp; Certifications</h2></div>
+      <div class="section-head"><span class="key">06</span><h2 id="ach-h">Achievements &amp; Certifications</h2></div>
 
       <div class="achieve-row">
         <div>
@@ -474,9 +702,9 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" aria-labelledby="contact-h">
     <div class="wrap">
-      <div class="section-head"><span class="key">07</span><h2>Contact</h2></div>
+      <div class="section-head"><span class="key">07</span><h2 id="contact-h">Contact</h2></div>
       <div class="contact-grid">
         <div class="contact-item">
           <div class="label">Email</div>
@@ -488,7 +716,19 @@
         </div>
         <div class="contact-item">
           <div class="label">LinkedIn</div>
-          <div class="value"><a href="https://linkedin.com/in/amiranatasharoslan" target="_blank" rel="noopener">linkedin.com/in/amiranatasharoslan</a></div>
+          <div class="value"><a href="https://www.linkedin.com/in/amiranatasharoslan" target="_blank" rel="noopener">linkedin.com/in/amiranatasharoslan</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="label">GitHub</div>
+          <div class="value"><a href="https://github.com/amiranatasharoslan" target="_blank" rel="noopener">github.com/amiranatasharoslan</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Location</div>
+          <div class="value">Kuala Lumpur, Malaysia</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Availability</div>
+          <div class="value">Open to opportunities</div>
         </div>
       </div>
     </div>
@@ -497,27 +737,106 @@
 </main>
 
 <footer>
-  <div class="wrap">Kuala Lumpur, Malaysia · Open to opportunities</div>
+  <div class="wrap">Kuala Lumpur, Malaysia <span class="dot">·</span> Built by hand, no framework</div>
 </footer>
 
 <script>
-  (function(){
-    var el = document.getElementById('terminalLine');
+(function(){
+  'use strict';
+
+  /* ---------- Theme ----------
+     Default is the OS preference. A click stores an explicit choice.
+     localStorage is wrapped because it throws in private mode and in
+     some embedded webviews — the page must still work without it. */
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var KEY = 'anr-theme';
+
+  function readStored(){
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function store(v){
+    try { localStorage.setItem(KEY, v); } catch (e) { /* no-op */ }
+  }
+  function systemPrefersDark(){
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function isDark(){
+    var t = root.getAttribute('data-theme');
+    if (t === 'dark') return true;
+    if (t === 'light') return false;
+    return systemPrefersDark();
+  }
+  function syncLabel(){
+    if (!toggle) return;
+    toggle.setAttribute('aria-label', isDark() ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+
+  var stored = readStored();
+  if (stored === 'dark' || stored === 'light') root.setAttribute('data-theme', stored);
+  syncLabel();
+
+  if (toggle){
+    toggle.addEventListener('click', function(){
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      store(next);
+      syncLabel();
+    });
+  }
+
+  /* ---------- Scrollspy ----------
+     Marks the nav link for whichever section is highest on screen.
+     Progressive enhancement: without IntersectionObserver nothing breaks. */
+  if ('IntersectionObserver' in window){
+    var links = {};
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.nav-links a[href^="#"]'),
+      function(a){ links[a.getAttribute('href').slice(1)] = a; }
+    );
+    var visible = {};
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ visible[e.target.id] = e.isIntersecting; });
+      var current = null;
+      Object.keys(links).forEach(function(id){
+        if (visible[id] && !current) current = id;
+      });
+      Object.keys(links).forEach(function(id){
+        if (id === current) links[id].setAttribute('aria-current', 'true');
+        else links[id].removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-72px 0px -65% 0px', threshold: 0 });
+
+    Object.keys(links).forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
+
+  /* ---------- Terminal flourish ----------
+     Decorative only; the <p> is aria-hidden so it is never announced.
+     Uses textContent for the typed string so nothing can be injected. */
+  var el = document.getElementById('terminalLine');
+  if (el){
     var text = '~/amiranatasha % whoami';
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced) { el.textContent = text; return; }
-    var i = 0;
-    function type(){
-      if (i <= text.length){
-        el.innerHTML = text.slice(0, i) + '<span class="cursor">&nbsp;</span>';
-        i++;
-        setTimeout(type, 38);
-      } else {
-        el.innerHTML = text + '<span class="cursor">&nbsp;</span>';
-      }
+    var cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    cursor.innerHTML = '&nbsp;';
+
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced){
+      el.textContent = text;
+      el.appendChild(cursor);
+    } else {
+      var i = 0;
+      (function type(){
+        el.textContent = text.slice(0, i);
+        el.appendChild(cursor);
+        if (i <= text.length){ i++; setTimeout(type, 38); }
+      })();
     }
-    type();
-  })();
+  }
+})();
 </script>
 
 </body>
